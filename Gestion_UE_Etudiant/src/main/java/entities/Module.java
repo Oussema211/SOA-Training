@@ -80,5 +80,18 @@ public class Module {
         this.uniteEnseignement = uniteEnseignement;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Module module = (Module) o;
+        return matricule.equals(module.matricule);
+    }
+
+    @Override
+    public int hashCode() {
+        return matricule.hashCode();
+    }
+
 
 }
